@@ -17,8 +17,8 @@
 		],
 		"files" : 
 		[
-			"C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython/Support.cmake",
-			"C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake",
+			"C:/msys64/mingw64/share/cmake/Modules/FindPython/Support.cmake",
+			"C:/msys64/mingw64/share/cmake/Modules/FindPython3.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
