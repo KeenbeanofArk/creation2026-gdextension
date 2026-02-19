@@ -1,8 +1,0 @@
-C:/dev/creation2026-gdextension/build/CMakeFiles/EXTENSION-NAME.dir
-C:/dev/creation2026-gdextension/build/CMakeFiles/generate_doc_source.dir
-C:/dev/creation2026-gdextension/build/CMakeFiles/edit_cache.dir
-C:/dev/creation2026-gdextension/build/CMakeFiles/rebuild_cache.dir
-C:/dev/creation2026-gdextension/build/godot-cpp/CMakeFiles/generate_bindings.dir
-C:/dev/creation2026-gdextension/build/godot-cpp/CMakeFiles/godot-cpp.dir
-C:/dev/creation2026-gdextension/build/godot-cpp/CMakeFiles/edit_cache.dir
-C:/dev/creation2026-gdextension/build/godot-cpp/CMakeFiles/rebuild_cache.dir

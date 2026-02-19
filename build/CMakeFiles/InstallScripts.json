@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/dev/creation2026-gdextension/build/cmake_install.cmake",
-		"C:/dev/creation2026-gdextension/build/godot-cpp/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

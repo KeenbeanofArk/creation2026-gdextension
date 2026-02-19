@@ -45,13 +45,19 @@ project(godot-cpp-template
 
 add_library(${LIBNAME} SHARED)
 
+# Add all binding source files
 target_sources(${LIBNAME}
     PRIVATE
     src/register_types.cpp
     src/register_types.h
-    src/example_class.cpp
-    src/example_class.h
 )
+
+# Add creationsrc implementation files
+file(GLOB_RECURSE CREATIONSRC_SOURCES "src/creationsrc/src/*.cpp")
+target_sources(${LIBNAME} PRIVATE ${CREATIONSRC_SOURCES})
+
+# Add include directories
+target_include_directories(${LIBNAME} PRIVATE "${PROJECT_SOURCE_DIR}/src/creationsrc/include")
 
 # Fetch a list of the xml files to use for documentation and add to our target
 file(GLOB_RECURSE DOC_XML LIST_DIRECTORIES NO CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}/doc_classes/*.xml")
