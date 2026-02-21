@@ -1,4 +1,7 @@
 #include "register_types.h"
+#include "bindings/CreatureBinding.h"
+#include "bindings/TerrainBinding.h"
+#include "bindings/WorldBinding.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/class_db.hpp>
@@ -12,7 +15,9 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level) {
 		return;
 	}
 
-	
+	ClassDB::register_class<TerrainBinding>();
+	ClassDB::register_class<CreatureBinding>();
+	ClassDB::register_class<WorldBinding>();
 }
 
 void uninitialize_gdextension_types(ModuleInitializationLevel p_level) {

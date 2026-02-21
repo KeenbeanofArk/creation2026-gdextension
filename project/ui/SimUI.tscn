@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bgsdi451elfcf"]
+
+[ext_resource type="Script" uid="uid://cbs46f5lbh4b4" path="res://ui/SimUI.gd" id="1"]
+
+[node name="SimUI" type="Control" unique_id=1875237458]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+
+[node name="Panel" type="Panel" parent="." unique_id=1379754786]
+layout_mode = 1
+offset_left = 28.0
+offset_top = 24.0
+offset_right = 308.0
+offset_bottom = 274.0
+metadata/_edit_group_ = true
+
+[node name="StatsVBox" type="VBoxContainer" parent="Panel" unique_id=1982666345]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatsLabel" type="Label" parent="Panel/StatsVBox" unique_id=28338102]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 30
+text = "Generation: 0
+Best Fitness: 0.00
+Avg Fitness: 0.00
+Species: 0"
+
+[node name="AliveLabel" type="Label" parent="Panel/StatsVBox" unique_id=311196866]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 30
+text = "Alive: 0   Step: 0"
+
+[node name="SpeciesPanel" type="PanelContainer" parent="." unique_id=123456789]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1209.0
+offset_top = 34.0
+offset_right = -32.0
+offset_bottom = 1343.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="SpeciesPanel" unique_id=111111111]
+layout_mode = 2
+
+[node name="SpeciesScrollContainer" type="ScrollContainer" parent="SpeciesPanel/VBox" unique_id=222222222]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+
+[node name="SpeciesVBox" type="VBoxContainer" parent="SpeciesPanel/VBox/SpeciesScrollContainer" unique_id=333333333]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DetailPanel" type="PanelContainer" parent="SpeciesPanel/VBox" unique_id=444444444]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DetailScroll" type="ScrollContainer" parent="SpeciesPanel/VBox/DetailPanel" unique_id=555555555]
+layout_mode = 2
+
+[node name="DetailLabel" type="Label" parent="SpeciesPanel/VBox/DetailPanel/DetailScroll" unique_id=666666666]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 28
+text = "Click on a creature to see details"
+autowrap_mode = 1
+
+[node name="HelpLabel" type="Label" parent="." unique_id=190805510]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -215.0
+offset_top = -23.0
+offset_right = 215.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "Right-click + drag: rotate  |  WASDQE: move  |  Space: pause/resume  |  R: restart"

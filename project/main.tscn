@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dn0bkx63u5cct"]
+
+[ext_resource type="Script" uid="uid://dm8ymeavcm0w0" path="res://main.gd" id="1"]
+[ext_resource type="Script" uid="uid://bda6leasyq1w6" path="res://camera/FreeCam.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bgsdi451elfcf" path="res://ui/SimUI.tscn" id="3"]
+
+[sub_resource type="Environment" id="env_1"]
+ambient_light_source = 2
+ambient_light_color = Color(0.4, 0.5, 0.6, 1)
+ambient_light_energy = 0.3
+
+[node name="Main" type="Node3D" unique_id=1711294497]
+script = ExtResource("1")
+
+[node name="WorldBinding" type="WorldBinding" parent="." unique_id=1249204274]
+population_size = 5
+food_count = 100
+terrain_size = 256
+max_segments = 20
+max_steps_per_gen = 2000
+energy_drain = 0.25
+terrain_height_scale = 8.0
+terrain_roughness = 1.0
+
+[node name="Terrain" type="TerrainBinding" parent="WorldBinding" unique_id=5492521]
+
+[node name="Creatures" type="Node3D" parent="WorldBinding" unique_id=1510949819]
+
+[node name="Food" type="Node3D" parent="WorldBinding" unique_id=1535766903]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1190805751]
+transform = Transform3D(1, 0, 0, 0, 0.921, 0.389, 0, -0.389, 0.921, 0, 20, 40)
+script = ExtResource("2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=404990087]
+transform = Transform3D(0.86601907, -0.3535631, 0.3535593, 0, 0.70710295, 0.7071106, -0.500011, -0.61237127, 0.61236465, 0, 30, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1989569389]
+environment = SubResource("env_1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=679811297]
+
+[node name="SimUI" parent="CanvasLayer" unique_id=927038957 instance=ExtResource("3")]
